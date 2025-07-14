@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  taskmaster-dev:
+    build:
+      context: .  # Le répertoire contenant ton Dockerfile
+    volumes:
+      - ./taskmaster:/taskmaster  # Volume partagé
+    working_dir: /taskmaster
+    stdin_open: true
+    tty: true
